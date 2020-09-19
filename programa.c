@@ -19,6 +19,11 @@ int main()
 	int i,total=0;
 	float promedio=0;
 	char arreglo[]={'a','e','i','o','u'};
+	struct
+			{
+				int salud[50],fuerza[50];
+				char nombre[70],tipo[70];
+			}personaje[5];
 	printf("Ingresa el procedimiento a realizar:\n1.- Arreglo de 5 numeros\n2.- Funcion Mostrar\n3.- Estructura personaje\n");
 	scanf("%i",&num);
 	switch(num)
@@ -42,6 +47,21 @@ int main()
 		case 2:
 			mostrar(n,arreglo);
 		break;
+		case 3:
+			for(i>=0;i<5;i++)
+			{
+				printf("Ingresa el nombre del personaje [%i]: ",i+1);
+				fflush(stdin); gets(personaje[i].nombre);
+				printf("Ingresa el tipo del personaje [%i]: ",i+1);
+				fflush(stdin); gets(personaje[i].tipo);
+				printf("Ingresa la fuerza del personaje [%i]: ",i+1);
+				scanf("%i",&personaje[i].fuerza);
+				printf("Ingresa la salud del personaje [%i]: ",i+1);
+				scanf("%i",&personaje[i].salud);
+			}
+		break;
+		default:printf("NUMERO INVALIDO");
 	}
+	system("pause");
 }
 	
