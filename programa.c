@@ -18,6 +18,7 @@ int main()
 	int numeros[5];
 	int i,total=0;
 	float promedio=0;
+	char arreglo[]={'a','e','i','o','u'};
 	printf("Ingresa el procedimiento a realizar:\n1.- Arreglo de 5 numeros\n2.- Funcion Mostrar\n3.- Estructura personaje\n");
 	scanf("%i",&num);
 	switch(num)
@@ -37,6 +38,9 @@ int main()
 		}
 		printf("\nLa suma es: %i",total);
 		printf("\nEl promedio es: %.2f\n",promedio);
+		break;
+		case 2:
+			mostrar(n,arreglo);
 		break;
 	}
 }
